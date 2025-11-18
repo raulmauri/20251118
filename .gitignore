@@ -1,0 +1,40 @@
+# ==============================
+# PYTHON
+# ==============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Entornos virtuales
+venv/
+env/
+.virtualenv/
+.venv/
+
+# Archivos de pruebas
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ==============================
+# FLASK / LOGS
+# ==============================
+*.log
+*.pid
+*.sqlite3
+
+# ANSIBLE
+# ==============================
+ansible/*.retry
+ansible/ip.txt
+ansible/inventory  # si se genera dinámicamente
+# No subir claves PEM
+*.pem
+*.key

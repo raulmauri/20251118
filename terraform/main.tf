@@ -6,9 +6,11 @@ terraform {
     }
   }
 }
+
 provider "aws" {
   region = var.aws_region
 }
+
 locals {
   nombre_workspace = terraform.workspace
   #ruta_private_key = "/home/rusok/Documentos/DevOps/ejemploTerraform/clasesdevops.pem"
@@ -36,9 +38,10 @@ resource "aws_instance" "mi_app_flask" {
       host = self.public_ip
     }
   }
-  provisioner "local-exec" {
-    command = "ansible-playbook -i ${self.public_ip}, --private-key ${var.ruta_private_key} ../ansible/playbook.yml"
-  }
+
+  #provisioner "local-exec" {
+  #  command = "ansible-playbook -i ${self.public_ip}, --private-key ${var.ruta_private_key} ../ansible/playbook.yml"
+  #}
 }
 
 

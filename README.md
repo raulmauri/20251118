@@ -28,7 +28,7 @@ ansible-playbook -i inventory playbook.yml
 ## Acceder a la app
 
 ```bash
-http://IP_PUBLICA:5000
+http://IP_PUBLICA:5000/
 ```
 
 ## Destruir la infraestructura

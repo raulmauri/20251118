@@ -48,4 +48,3 @@ pipeline {
         }
     }
 }
-🟩 5. README.

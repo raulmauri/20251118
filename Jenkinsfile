@@ -22,7 +22,7 @@ pipeline {
                 sh '''
                 cd terraform
                 terraform init
-                terraform apply -auto-approve -var="private_key_path=/home/ubuntu/key.pem"
+                terraform apply -auto-approve -var="private_key_path=/home/ubuntu/clasesdevops.pem"
                 '''
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                 cd ansible
                 PUBLIC_IP=$(cat ip.txt)
                 echo "[app]" > inventory
-                echo "$PUBLIC_IP ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/key.pem" >> inventory
+                echo "$PUBLIC_IP ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/clasesdevops.pem" >> inventory
                 '''
             }
         }
